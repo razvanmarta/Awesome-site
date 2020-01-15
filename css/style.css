@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans', sans-serif;;
+}
+
+h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: lighter;
+
+}
+/*header */
+
+.aw-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.aw-align-center {
+    align-items: center;
+}
+
+.aw-main-banner {
+    display: block;
+    width: 100%;
+}
+header {
+    position: relative;
+}
+
+header nav {
+    position: fixed;
+    width: 100%;
+    padding:10px;
+    background: rgb(0, 0, 0, .5);
+    z-index: 99;
+}
+
+header nav ul.aw-navigation {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul.aw-navigation li a {
+    display: block;
+    padding: 0 16px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header nav ul.aw-navigation li a:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color: #ffff;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+header nav ul.aw-navigation li a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+header nav ul.aw-navigation li:last-child a {
+    padding-right: 0;
+}
+
+.aw-header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+}
+
+.aw-header-text .aw-arrow {
+    display: inline-block;
+    padding: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.aw-header-text .aw-arrow:hover {
+    opacity:  .7;
+}
+
+
+/*logo */
+
+.aw-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: black;
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+/* Animation */
+.aw-pulsate {
+    -webkit-animation: pulsate 3s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: .3;
+}
+@keyframes pulsate {
+    0% {
+        opacity: .3;
+    }
+    50% {
+         opacity: 1;
+    }
+    100% {
+         opacity: .3;
+    }
+}

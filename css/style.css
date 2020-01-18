@@ -1,7 +1,17 @@
+@import "fonts.css";
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Alegreya Sans', sans-serif;;
+}
+
+* {
+    text-decoration: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
 }
 
 h1 {
@@ -11,6 +21,17 @@ h1 {
 
 }
 /*header */
+
+h3 {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3::first-letter {
+    color: #dca453 ;
+}
 
 .aw-container {
     display: flex;
@@ -37,7 +58,7 @@ header {
 header nav {
     position: fixed;
     width: 100%;
-    padding:10px;
+    padding:10px 0 10px 0;
     background: rgb(0, 0, 0, .5);
     z-index: 99;
 }
@@ -102,6 +123,24 @@ header nav ul.aw-navigation li:last-child a {
     opacity:  .7;
 }
 
+/* Sections */
+
+.aw-sections { 
+    padding: 85px 0;
+}
+
+/* About us*/
+
+#aw-about .aw-column {
+    width: 48%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#aw-about i {
+    font-size: 45px;
+    color:#dca453;
+}
 
 /*logo */
 

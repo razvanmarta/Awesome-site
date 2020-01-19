@@ -142,6 +142,50 @@ header nav ul.aw-navigation li:last-child a {
     color:#dca453;
 }
 
+/* Gallery */
+
+#aw-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#aw-gallery li {
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+} 
+
+#aw-gallery li img {
+    display: block;
+    width: 100%;
+    transition: all .3s ease;
+}
+
+
+#aw-gallery li:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    transition: all 0.3s ease;
+}
+
+#aw-gallery li:hover:after{
+    height: 0;
+    width: 0;
+}
+
+#aw-gallery li:hover img {
+transform: scale(1.2);
+}
 /*logo */
 
 .aw-logo {
@@ -157,13 +201,84 @@ header nav ul.aw-navigation li:last-child a {
     border: 2px solid white;
     border-radius: 100%;
 }
+/* Testimonials */
+
+#aw-testimonials {
+ display: flex; 
+ flex-direction: column;
+ align-items: center;
+}
+
+.aw-testimonials {
+max-width: 500px;
+position: relative;
+}
+
+.aw-testimonials ul {
+display: flex;
+padding: 0;
+list-style-type: none;
+overflow: hidden;
+}
+
+.aw-testimonials ul li {
+min-width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  
+}
+
+.aw-testimonials ul li .aw-user-data img {
+    border-radius: 100%;
+}
+
+.aw-testimonials ul li .aw-user-name {
+    display: block;
+    margin: 15px 0;
+}
+
+.aw-testimonials ul li>p {
+    font-size: 20px;
+    font-style: italic;
+    color: #cccc;
+    text-align: center  ;
+}
+
+.aw-testimonials .aw-arrow {
+    display: inline-block;
+    padding: 20px;
+    border: solid #eee;
+    border-width: 0 3px 3px 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+    position: absolute;
+    top: 50%;
+    transition: border-color 0.3s ease;
+}
+
+.aw-testimonials .aw-arrow.aw-arrow-left {
+    transform: rotate(135deg);
+    right: 120%;
+}
+
+.aw-testimonials .aw-arrow:hover {
+    border-color: #dca453;
+}
+
+
+.aw-testimonials .aw-arrow.aw-arrow-right {
+    transform: rotate(-45deg);
+    left: 120%;
+}
 
 /* Animation */
 .aw-pulsate {
     -webkit-animation: pulsate 3s ease-in-out;
     -webkit-animation-iteration-count: infinite;
     opacity: .3;
-}
+} 
 @keyframes pulsate {
     0% {
         opacity: .3;

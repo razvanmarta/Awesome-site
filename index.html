@@ -15,13 +15,13 @@
     <header>
         <nav>
             <div class="aw-container aw-align-center">
-                <a class="aw-logo" href="#">Aw!</a>
+                <a class="aw-logo aw-section-link" href="#">Aw!</a>
                 <ul class="aw-navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#aw-about">About Us</a></li>
-                    <li><a href="#aw-gallery">Gallery</a></li>
-                    <li><a href="#aw-testimonials">Testimonials</a></li>
-                    <li><a href="#aw-contact">Contact</a></li>
+                    <li><a class="aw-section-link" href="#">Home</a></li>
+                    <li><a class="aw-section-link" href="#aw-about">About Us</a></li>
+                    <li><a class="aw-section-link" href="#aw-gallery">Gallery</a></li>
+                    <li><a class="aw-section-link" href="#aw-testimonials">Testimonials</a></li>
+                    <li><a class="aw-section-link" href="#aw-contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -29,7 +29,7 @@
         <section class="aw-header-content">
             <div class="aw-header-text">
                 <h1 class="aw-pulsate">I'm awesome !</h1>
-                <i class="aw-arrow"></i>
+                <i class="aw-arrow aw-section-link" data-href="#aw-about"></i>
             </div>
             <img class="aw-main-banner" src="./img/banner.jpg" alt="awesome banner" />
         </section>
@@ -155,8 +155,20 @@
 
     <!-- Website footer -->
 
-    <footer></footer>
+    <footer>
+        <div class="aw-container aw-align-center">
+            <a class="aw-logo aw-section-link" href="#">Aw!</a>
+
+            <ul class="aw-social-icons">
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-instagram"></i></a></li>
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
+<script src="./js/main.js"></script>
 
 </html>

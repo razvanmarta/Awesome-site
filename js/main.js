@@ -44,8 +44,26 @@
             'top': sectionPosition
         })
     }
+
+    const onTestimonialChange = () => {
+        let lastChild, firstChild;
+        const prevArrow = document.querySelector('#aw-testimonials-prev');
+        const nextArrow = document.querySelector('#aw-testimonials-next');
+        const testimonials = document.querySelector('.aw-testimonials ul');
+        document.addEventListener('click', () => {
+            if (event.target === prevArrow) {
+                lastChild = testimonials.lastElementChild;
+                testimonials.insertAdjacentElement("afterBegin", lastChild);
+            } else if (event.target === nextArrow) {
+                firstChild = testimonials.firstElementChild;
+                testimonials.insertAdjacentElement("beforeEnd", firstChild)
+            }
+        })
+    }
+
     window.addEventListener("scroll", () => {
         addMenuBackground();
     })
     onNavItemClick();
+    onTestimonialChange();
 })(); 

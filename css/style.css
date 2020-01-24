@@ -192,6 +192,38 @@ header nav ul.aw-navigation li:last-child a {
 #aw-gallery li:hover img {
 transform: scale(1.2);
 }
+
+.aw-backdrop {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .9);
+    z-index: 99999;
+}
+
+.aw-backdrop img {
+    max-width: 80%;
+}
+
+span.aw-backdrop-close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:20px;
+    right: 20px; 
+    width: 30px;
+    height: 30px;
+    color: #ffff;
+    border: 1px solid #ffff;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 20px;
+}
 /*logo */
 
 .aw-logo {

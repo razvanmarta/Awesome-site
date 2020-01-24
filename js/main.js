@@ -37,7 +37,6 @@
         } else {
             sectionPosition = 0;
         }
-
         window.scrollTo({
             'behavior': 'smooth',
             'left': 0,
@@ -50,6 +49,7 @@
         const prevArrow = document.querySelector('#aw-testimonials-prev');
         const nextArrow = document.querySelector('#aw-testimonials-next');
         const testimonials = document.querySelector('.aw-testimonials ul');
+
         document.addEventListener('click', () => {
             if (event.target === prevArrow) {
                 lastChild = testimonials.lastElementChild;
@@ -61,9 +61,32 @@
         })
     }
 
+    const onGalleryImageClick = () => {
+        const galleryImageList = document.querySelectorAll("#aw-gallery li");
+        // console.log(galleryImageList);
+        const galleryImages = [...galleryImageList];
+
+        galleryImages.forEach(image => {
+            image.addEventListener("click", event => {
+                galleryImageOpen(event.target);
+            })
+        })
+    }
+    // console.log(image);
+    const galleryImageOpen = image => {
+        const imageSrc = image.getAttribute("src");
+        // console.log(imageSrc);
+        const openImage = `<div class='aw-backdrop'>
+        <img src='${imageSrc}' alt=''/>
+        <span class='aw-backdrop-close'>X</span></div>`;
+
+        document.body.insertAdjacentHTML("beforeend", openImage);
+    }
+
     window.addEventListener("scroll", () => {
         addMenuBackground();
     })
     onNavItemClick();
     onTestimonialChange();
+    onGalleryImageClick();
 })(); 

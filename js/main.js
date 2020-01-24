@@ -81,6 +81,15 @@
         <span class='aw-backdrop-close'>X</span></div>`;
 
         document.body.insertAdjacentHTML("beforeend", openImage);
+        galleryImageClose();
+    }
+
+    const galleryImageClose = () => {
+        const closeButton = document.querySelector(".aw-backdrop-close");
+        closeButton.addEventListener("click", () => {
+            const backdrop = document.querySelector(".aw-backdrop");
+            backdrop.remove();
+        })
     }
 
     window.addEventListener("scroll", () => {
@@ -89,4 +98,5 @@
     onNavItemClick();
     onTestimonialChange();
     onGalleryImageClick();
+
 })(); 

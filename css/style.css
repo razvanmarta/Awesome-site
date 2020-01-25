@@ -64,6 +64,10 @@ header nav {
     transition: all .3s ease;
 } 
 
+header nav .aw-nav-toggle {
+    display: none;
+}
+
 header nav.aw-nav-fixed {
     background: rgb(0, 0, 0, .5);
     margin: 0;
@@ -449,5 +453,40 @@ footer .aw-social-icons li a:hover {
     }
     header nav.aw-nav-fixed {
         background: none;
+    }
+    ul.aw-navigation {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: rgba(0, 0, 0, .7);
+        max-height: 0;
+        transition: max-height .6s ease;
+    }
+    ul.aw-navigation.aw-navigation-opened {
+        max-height: 900px;
+        transition: max-height 1.3s ease;
+    }
+     
+    ul.aw-navigation li {
+    padding:0 15px;
+    }
+    ul.aw-navigation li a {
+    display: block;
+    padding:10px 0;
+    color: #ffff;
+    border-bottom: 1px solid #9999;
+    }
+    ul.aw-navigation li:last-child a {
+        border-bottom: none;
+        padding-bottom: 20px;
+    }
+    ul.aw-navigation li:first-child a {
+        padding-top: 20px;
+    }
+    header nav .aw-nav-toggle {
+        display: block;
+        color: #ffff;
+        font-size: 25px; 
     }
 }

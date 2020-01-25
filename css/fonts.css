@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+  content: "\e900";
+}
 .icon-trophy:before {
   content: "\e99e";
 }

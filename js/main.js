@@ -25,6 +25,14 @@
         }
     }
 
+    const mobileMenuToggle = () => {
+        const menuToggle = document.querySelector(".aw-nav-toggle");
+        menuToggle.addEventListener("click", () => {
+            const mobileNavigation = document.querySelector("body > ul.aw-navigation");
+            mobileNavigation.classList.toggle("aw-navigation-opened")
+        })
+    };
+
     const onNavItemClick = () => {
         const navItemList = document.querySelectorAll(".aw-section-link");
         const navItems = [...navItemList];
@@ -112,6 +120,7 @@
     window.addEventListener("resize", () => {
         reorderResponsiveMenu();
     })
+    mobileMenuToggle();
     reorderResponsiveMenu();
     onNavItemClick();
     onTestimonialChange();

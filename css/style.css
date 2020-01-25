@@ -461,11 +461,11 @@ footer .aw-social-icons li a:hover {
         overflow: hidden;
         background: rgba(0, 0, 0, .7);
         max-height: 0;
-        transition: max-height .6s ease;
+        transition: max-height .4s ease;
     }
     ul.aw-navigation.aw-navigation-opened {
         max-height: 900px;
-        transition: max-height 1.3s ease;
+        transition: max-height 1s ease;
     }
      
     ul.aw-navigation li {
@@ -489,4 +489,36 @@ footer .aw-social-icons li a:hover {
         color: #ffff;
         font-size: 25px; 
     }
+}
+
+@media all and (max-width: 600px) {
+    .aw-logo {
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+    }
+    h1, h3 {
+        font-size: 35px;
+    }
+    .aw-header-text .aw-arrow, .aw-testimonials .aw-arrow {
+        padding: 10px;
+    }
+    #aw-about .aw-column {
+        width: 100%;
+    }
+    #aw-gallery li {
+        width: 33.33%;
+    }
+    .aw-testimonials ul li > p {
+        font-size: 16px;
+    }
+    .aw-testimonials {
+        max-width: 80%;
+    }
+#aw-contact form input:not([type="submit"]),
+#aw-contact textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 10px auto;
+}
 }

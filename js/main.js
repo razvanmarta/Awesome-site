@@ -11,6 +11,20 @@
         }
     }
 
+    const reorderResponsiveMenu = () => {
+        const pageWidth = window.innerWidth;
+        console.log(pageWidth)
+        const navContainer = document.querySelector("header nav .aw-container");
+        const navigation = document.querySelector("header nav .aw-navigation");
+        const mobileNavigation = document.querySelector("body > ul.aw-navigation");
+        console.log("1", navContainer, '2', navigation, '3', mobileNavigation)
+        if (pageWidth <= mobileWidth && navigation) {
+            document.body.insertAdjacentElement('afterbegin', navigation)
+        } else if (pageWidth > mobileWidth && mobileNavigation) {
+            navContainer.insertAdjacentElement('beforeend', mobileNavigation)
+        }
+    }
+
     const onNavItemClick = () => {
         const navItemList = document.querySelectorAll(".aw-section-link");
         const navItems = [...navItemList];
@@ -95,6 +109,10 @@
     window.addEventListener("scroll", () => {
         addMenuBackground();
     })
+    window.addEventListener("resize", () => {
+        reorderResponsiveMenu();
+    })
+    reorderResponsiveMenu();
     onNavItemClick();
     onTestimonialChange();
     onGalleryImageClick();
